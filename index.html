@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nail Art by Jeni | İzmir Karabağlar Butik Tırnak Stüdyosu</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        powder: '#F4E8EC',
+        nude: '#E8D5C4',
+        gold: '#D4AF37',
+        champagne: '#E0A96D',
+        ink: '#2B232A',
+        cream: '#FAFAFA',
+      },
+      fontFamily: {
+        serif: ['"Playfair Display"', 'serif'],
+        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Plus Jakarta Sans', sans-serif; color: #2B232A; background: #FAFAFA; }
+  h1,h2,h3,.font-serif { font-family: 'Playfair Display', serif; }
+  .ig-gradient { background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); }
+  .text-gold-gradient { background: linear-gradient(90deg,#D4AF37,#E0A96D); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .hero-overlay { background: linear-gradient(120deg, rgba(43,35,42,.72) 0%, rgba(43,35,42,.35) 55%, rgba(43,35,42,.15) 100%); }
+  .reveal { opacity:0; transform: translateY(30px); transition: all .8s cubic-bezier(.2,.7,.2,1); }
+  .reveal.show { opacity:1; transform: none; }
+  .card-hover { transition: transform .4s ease, box-shadow .4s ease; }
+  .card-hover:hover { transform: translateY(-8px); box-shadow: 0 24px 50px -20px rgba(43,35,42,.35); }
+  ::-webkit-scrollbar { width: 10px; }
+  ::-webkit-scrollbar-thumb { background: #E0A96D; border-radius: 10px; }
+</style>
+</head>
+<body class="antialiased">
+
+<!-- ============ HEADER ============ -->
+<header id="top" class="fixed top-0 inset-x-0 z-50 transition-all duration-300" id="navbar">
+  <div id="nav" class="transition-all duration-300 bg-cream/80 backdrop-blur-md border-b border-nude/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-20">
+      <a href="#top" class="flex items-center gap-2 group">
+        <span class="w-11 h-11 rounded-full ig-gradient flex items-center justify-center text-white shadow-md group-hover:scale-105 transition">
+          <i class="fa-solid fa-hand-sparkles"></i>
+        </span>
+        <span class="leading-tight">
+          <span class="block font-serif text-xl font-bold text-ink">Nail Art <span class="text-gold-gradient">by Jeni</span></span>
+          <span class="block text-[10px] tracking-[0.25em] text-champagne uppercase">Butik Tırnak Stüdyosu</span>
+        </span>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-ink/80">
+        <a href="#hakkimizda" class="hover:text-champagne transition">Hakkımızda</a>
+        <a href="#hizmetler" class="hover:text-champagne transition">Hizmetler</a>
+        <a href="#instagram" class="hover:text-champagne transition">Instagram</a>
+        <a href="#yorumlar" class="hover:text-champagne transition">Müşteri Yorumları</a>
+        <a href="#iletisim" class="hover:text-champagne transition">İletişim</a>
+      </nav>
+
+      <div class="hidden md:flex items-center gap-3">
+        <a href="https://wa.me/905000000000?text=Merhaba,%20web%20sitenizden%20ula%C5%9F%C4%B1yorum.%20Nail%20art%20ve%20randevu%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank"
+           class="inline-flex items-center gap-2 bg-[#25D366] text-white px-4 py-2.5 rounded-full text-sm font-semibold shadow hover:brightness-95 transition">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp Randevu
+        </a>
+        <a href="https://www.instagram.com/nailart_by_jeni/" target="_blank"
+           class="inline-flex items-center gap-2 ig-gradient text-white px-4 py-2.5 rounded-full text-sm font-semibold shadow hover:brightness-95 transition">
+          <i class="fa-brands fa-instagram"></i> Instagram
+        </a>
+      </div>
+
+      <button id="menuBtn" class="lg:hidden text-2xl text-ink w-10 h-10 flex items-center justify-center">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="lg:hidden hidden bg-cream border-b border-nude/40 shadow-lg">
+    <nav class="flex flex-col px-6 py-4 gap-1 text-ink font-medium">
+      <a href="#hakkimizda" class="mobile-link py-3 border-b border-nude/30">Hakkımızda</a>
+      <a href="#hizmetler" class="mobile-link py-3 border-b border-nude/30">Hizmetler</a>
+      <a href="#instagram" class="mobile-link py-3 border-b border-nude/30">Instagram</a>
+      <a href="#yorumlar" class="mobile-link py-3 border-b border-nude/30">Müşteri Yorumları</a>
+      <a href="#iletisim" class="mobile-link py-3">İletişim</a>
+      <div class="flex gap-3 pt-4">
+        <a href="https://wa.me/905000000000" target="_blank" class="flex-1 text-center bg-[#25D366] text-white py-3 rounded-full text-sm font-semibold"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+        <a href="https://www.instagram.com/nailart_by_jeni/" target="_blank" class="flex-1 text-center ig-gradient text-white py-3 rounded-full text-sm font-semibold"><i class="fa-brands fa-instagram"></i> Instagram</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="relative min-h-[100vh] flex items-center pt-24 pb-20 overflow-hidden">
+  <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=1600&q=80"
+       alt="Nail Art" class="absolute inset-0 w-full h-full object-cover">
+  <div class="absolute inset-0 hero-overlay"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
+    <div class="text-white">
+      <span class="inline-flex items-center gap-2 bg-white/15 backdrop-blur px-4 py-1.5 rounded-full text-xs tracking-widest uppercase mb-6 border border-white/25">
+        <i class="fa-solid fa-star text-gold"></i> İzmir Karabağlar • 5.0 Puan
+      </span>
+      <h1 class="font-serif text-4xl sm:text-5xl xl:text-6xl font-bold leading-[1.1] mb-6">
+        İzmir Karabağlar'da <br class="hidden sm:block"> Tırnaklarınızda <span class="text-gold-gradient">İnce İşçilik</span> Ve Özel Sanat
+      </h1>
+      <p class="text-white/85 text-lg max-w-xl mb-8 leading-relaxed">
+        Manikür, pedikür, kalıcı oje ve kişiye özel nail art tasarımlarında titiz yaklaşımımızla tarzınızı yansıtın.
+      </p>
+
+      <div class="flex flex-col sm:flex-row flex-wrap gap-4">
+        <a href="https://wa.me/905000000000?text=Merhaba,%20web%20sitenizden%20ula%C5%9F%C4%B1yorum.%20Nail%20art%20ve%20randevu%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank"
+           class="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white px-6 py-4 rounded-full font-semibold shadow-lg hover:scale-[1.03] transition">
+          <i class="fa-brands fa-whatsapp text-xl"></i> Hızlı WhatsApp Randevu
+        </a>
+        <a href="https://www.instagram.com/nailart_by_jeni/" target="_blank"
+           class="inline-flex items-center justify-center gap-2 ig-gradient text-white px-6 py-4 rounded-full font-semibold shadow-lg hover:scale-[1.03] transition">
+          <i class="fa-brands fa-instagram text-xl"></i> Instagram Profili
+        </a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Arap+Hasan+239.+Sk.+35A+35150+Karaba%C4%9Flar+%C4%B0zmir" target="_blank"
+           class="inline-flex items-center justify-center gap-2 bg-white text-ink px-6 py-4 rounded-full font-semibold shadow-lg hover:scale-[1.03] transition">
+          <i class="fa-solid fa-location-dot text-champagne text-xl"></i> Haritada Yol Tarifi Al
+        </a>
+      </div>
+    </div>
+
+    <div class="hidden lg:block relative">
+      <div class="relative rounded-[2rem] overflow-hidden shadow-2xl rotate-2 hover:rotate-0 transition duration-500 border-4 border-white/30">
+        <img src="https://dvxrhkgloakisnvqoxgl.supabase.co/storage/v1/object/sign/images/inputs/1789086212398_8x0ybgqby.jpg?token=eyJraWQiOiI0NWE1YWU1ZS0xNzg4LTRiMWYtYWM5OC1hMjgwNmQ2OTM4ZWMiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJpbWFnZXMvaW5wdXRzLzE3ODkwODYyMTIzOThfOHgweWJncWJ5LmpwZyIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODkwODYyMzIsImV4cCI6MTgyMDYyMjIzMn0.B3J9_9xHkwDkPPQbaDlEMISdkgbIhMOYpbtFmIBxWJo"
+             alt="Nail Art by Jeni stüdyo" class="w-full h-[520px] object-cover">
+      </div>
+      <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl px-6 py-4 flex items-center gap-3">
+        <div class="text-3xl font-serif font-bold text-gold-gradient">5.0</div>
+        <div class="text-xs text-ink/70 leading-tight">
+          <div class="text-gold text-sm mb-0.5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+          Mükemmel<br>Müşteri Puanı
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HAKKIMIZDA ============ -->
+<section id="hakkimizda" class="py-24 bg-cream">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-14 items-center">
+      <div class="reveal">
+        <span class="text-champagne uppercase tracking-[0.25em] text-xs font-semibold">Hakkımızda</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold mt-3 mb-6 leading-tight">
+          Her Tırnak Bir <span class="text-gold-gradient">Sanat Eseri</span>
+        </h2>
+        <p class="text-ink/70 leading-relaxed mb-5">
+          <strong>Nail Art by Jeni</strong>, İzmir Karabağlar'da kişiye özel tasarım anlayışını, en yüksek hijyen standartlarını ve
+          ince detaylara gösterdiği özeni bir araya getiren butik bir tırnak stüdyosudur. Her müşterimize özel ilgi göstererek,
+          tarzınızı ve kişiliğinizi yansıtan benzersiz nail art çalışmaları hazırlıyoruz.
+        </p>
+        <p class="text-ink/70 leading-relaxed mb-8">
+          %100 steril ekipmanlar, uzun süre dayanıklı kaliteli malzemeler ve titiz işçilikle; sağlıklı, estetik ve kalıcı sonuçlar sunuyoruz.
+        </p>
+        <a href="https://wa.me/905000000000" target="_blank" class="inline-flex items-center gap-2 text-ink font-semibold border-b-2 border-champagne pb-1 hover:text-champagne transition">
+          Randevu Oluştur <i class="fa-solid fa-arrow-right-long"></i>
+        </a>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div class="reveal card-hover bg-white rounded-2xl p-6 shadow-sm border border-nude/40">
+          <div class="w-12 h-12 rounded-xl bg-powder flex items-center justify-center text-champagne text-xl mb-4"><i class="fa-solid fa-paintbrush"></i></div>
+          <h3 class="font-serif text-lg font-bold mb-2">Kişiye Özel Nail Art Sanatı</h3>
+          <p class="text-sm text-ink/60">Tarzınıza uygun, el işçiliğiyle hazırlanan benzersiz tasarımlar.</p>
+        </div>
+        <div class="reveal card-hover bg-white rounded-2xl p-6 shadow-sm border border-nude/40" style="transition-delay:.1s">
+          <div class="w-12 h-12 rounded-xl bg-powder flex items-center justify-center text-champagne text-xl mb-4"><i class="fa-solid fa-shield-heart"></i></div>
+          <h3 class="font-serif text-lg font-bold mb-2">%100 Steril Ekipmanlar</h3>
+          <p class="text-sm text-ink/60">Her uygulamada hijyen ve sağlık önceliğimizdir.</p>
+        </div>
+        <div class="reveal card-hover bg-white rounded-2xl p-6 shadow-sm border border-nude/40" style="transition-delay:.2s">
+          <div class="w-12 h-12 rounded-xl bg-powder flex items-center justify-center text-champagne text-xl mb-4"><i class="fa-solid fa-star"></i></div>
+          <h3 class="font-serif text-lg font-bold mb-2">5.0 Mükemmel Puan</h3>
+          <p class="text-sm text-ink/60">Google'da müşterilerimizin tam puanla değerlendirdiği hizmet.</p>
+        </div>
+        <div class="reveal card-hover bg-white rounded-2xl p-6 shadow-sm border border-nude/40" style="transition-delay:.3s">
+          <div class="w-12 h-12 rounded-xl bg-powder flex items-center justify-center text-champagne text-xl mb-4"><i class="fa-solid fa-gem"></i></div>
+          <h3 class="font-serif text-lg font-bold mb-2">Uzun Süre Dayanıklı</h3>
+          <p class="text-sm text-ink/60">Kaliteli malzemelerle haftalarca dayanan parlaklık.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HIZMETLER ============ -->
+<section id="hizmetler" class="py-24 bg-powder/40">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto mb-14 reveal">
+      <span class="text-champagne uppercase tracking-[0.25em] text-xs font-semibold">Hizmetlerimiz</span>
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold mt-3">Size Özel <span class="text-gold-gradient">Profesyonel Bakım</span></h2>
+      <p class="text-ink/60 mt-4">Sağlıklı tırnaklar ve estetik tasarımlar için özenle hazırlanmış hizmetlerimiz.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- card -->
+      <div class="reveal card-hover bg-white rounded-3xl overflow-hidden shadow-sm border border-nude/40 flex flex-col">
+        <div class="h-56 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=800&q=80" alt="Nail Art" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+        </div>
+        <div class="p-7 flex flex-col flex-1">
+          <h3 class="font-serif text-xl font-bold mb-3">Özel Tasarım Nail Art</h3>
+          <p class="text-sm text-ink/60 mb-6 flex-1">İnce fırça çizimleri, trend desenler, taş süslemeleri ve tarzınıza özel illüstrasyonlar.</p>
+          <a href="https://wa.me/905000000000?text=Merhaba,%20%C3%96zel%20Tasar%C4%B1m%20Nail%20Art%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" class="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white py-3 rounded-full text-sm font-semibold hover:brightness-95 transition">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp ile Detaylı Bilgi Al
+          </a>
+        </div>
+      </div>
+      <!-- card -->
+      <div class="reveal card-hover bg-white rounded-3xl overflow-hidden shadow-sm border border-nude/40 flex flex-col" style="transition-delay:.1s">
+        <div class="h-56 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=800&q=80" alt="Manikür" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+        </div>
+        <div class="p-7 flex flex-col flex-1">
+          <h3 class="font-serif text-xl font-bold mb-3">Medikal Manikür & Pedikür</h3>
+          <p class="text-sm text-ink/60 mb-6 flex-1">Tırnak sağlığını koruyan, pürüzsüzlük sağlayan profesyonel bakım rutinleri.</p>
+          <a href="https://wa.me/905000000000?text=Merhaba,%20Medikal%20Manik%C3%BCr%20%26%20Pedik%C3%BCr%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" class="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white py-3 rounded-full text-sm font-semibold hover:brightness-95 transition">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp ile Detaylı Bilgi Al
+          </a>
+        </div>
+      </div>
+      <!-- card -->
+      <div class="reveal card-hover bg-white rounded-3xl overflow-hidden shadow-sm border border-nude/40 flex flex-col" style="transition-delay:.2s">
+        <div class="h-56 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?auto=format&fit=crop&w=800&q=80" alt="Kalıcı Oje" class="w-full h-full object-cover hover:scale-105 transition duration-500">
+        </div>
+        <div class="p-7 flex flex-col flex-1">
+          <h3 class="font-serif text-xl font-bold mb-3">Protez Tırnak & Kalıcı Oje</h3>
+          <p class="text-sm text-ink/60 mb-6 flex-1">Doğal görünümlü, dayanıklı ve haftalarca parlaklığını koruyan uygulamalar.</p>
+          <a href="https://wa.me/905000000000?text=Merhaba,%20Protez%20T%C4%B1rnak%20%26%20Kal%C4%B1c%C4%B1%20Oje%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" class="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white py-3 rounded-full text-sm font-semibold hover:brightness-95 transition">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp ile Detaylı Bilgi Al
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INSTAGRAM ============ -->
+<section id="instagram" class="py-24 bg-cream">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+      <span class="text-champagne uppercase tracking-[0.25em] text-xs font-semibold"><i class="fa-brands fa-instagram"></i> @nailart_by_jeni</span>
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold mt-3">Son Tasarımlarımızı <span class="text-gold-gradient">Instagram'da Keşfedin</span></h2>
+      <p class="text-ink/60 mt-4">@nailart_by_jeni hesabımızı takip ederek en güncel modellerimizi ve çalışma süreçlerimizi inceleyebilirsiniz.</p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+      <a href="https://www.instagram.com/nailart_by_jeni/" target="_blank" class="reveal group relative rounded-2xl overflow-hidden aspect-square">
+        <img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="">
+        <div class="absolute inset-0 bg-ink/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition"><i class="fa-brands fa-instagram text-white text-3xl"></i></div>
+      </a>
+      <a href="https://www.instagram.com/nailart_by_jeni/" target="_blank" class="reveal group relative rounded-2xl overflow-hidden aspect-square" style="transition-delay:.1s">
+        <img src="https://images.unsplash.com/photo-1636018942671-99f36ac96e2f?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="">
+        <div class="absolute inset-0 bg-ink/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition"><i class="fa-brands fa-instagram text-white text-3xl"></i></div>
+      </a>
+      <a href="https://www.instagram.com/nailart_by_jeni/" target="_blank" class="reveal group relative rounded-2xl overflow-hidden aspect-square" style="transition-delay:.2s">
+        <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="">
+        <div class="absolute inset-0 bg-ink/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition"><i class="fa-brands fa-instagram text-white text-3xl"></i></div>
+      </a>
+      <a href="https://www.instagram.com/nailart_by_jeni/" target="_blank" class="reveal group relative rounded-2xl overflow-hidden aspect-square" style="transition-delay:.3s">
+        <img src="https://images.unsplash.com/photo-1604902396830-aca29e19b067?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="">
+        <div class="absolute inset-0 bg-ink/40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition"><i class="fa-brands fa-instagram text-white text-3xl"></i></div>
+      </a>
+    </div>
+
+    <div class="text-center reveal">
+      <a href="https://www.instagram.com/nailart_by_jeni/" target="_blank"
+         class="inline-flex items-center gap-3 ig-gradient text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:scale-105 transition">
+        <i class="fa-brands fa-instagram text-2xl"></i> Instagram'da Takip Et
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ YORUMLAR ============ -->
+<section id="yorumlar" class="py-24 bg-powder/40">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-12 reveal">
+      <div class="inline-flex items-center gap-3 bg-white rounded-full px-6 py-3 shadow-md border border-nude/40 mb-6">
+        <i class="fa-brands fa-google text-2xl"></i>
+        <span class="text-gold text-lg"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+        <span class="font-bold text-ink text-lg">5.0 / 5</span>
+        <span class="text-sm text-ink/50">Google Puanı</span>
+      </div>
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold">Müşterilerimiz <span class="text-gold-gradient">Ne Diyor?</span></h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="reveal card-hover bg-white rounded-2xl p-7 shadow-sm border border-nude/40">
+        <div class="text-gold mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="text-ink/70 text-sm leading-relaxed mb-6">"Titiz işçiliği ve detaylara verdiği önem inanılmaz. Tırnaklarım hiç bu kadar güzel görünmemişti. Kesinlikle tavsiye ediyorum!"</p>
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-full bg-powder flex items-center justify-center font-bold text-champagne">EK</div>
+          <div><div class="font-semibold text-sm">Elif K.</div><div class="text-xs text-ink/40">Google Yorumu</div></div>
+        </div>
+      </div>
+      <div class="reveal card-hover bg-white rounded-2xl p-7 shadow-sm border border-nude/40" style="transition-delay:.1s">
+        <div class="text-gold mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="text-ink/70 text-sm leading-relaxed mb-6">"Hijyen konusunda çok hassas, ortam tertemiz ve çok samimi. Kalıcı ojem haftalarca hiç bozulmadan durdu. Ellerine sağlık!"</p>
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-full bg-powder flex items-center justify-center font-bold text-champagne">MŞ</div>
+          <div><div class="font-semibold text-sm">Merve Ş.</div><div class="text-xs text-ink/40">Google Yorumu</div></div>
+        </div>
+      </div>
+      <div class="reveal card-hover bg-white rounded-2xl p-7 shadow-sm border border-nude/40" style="transition-delay:.2s">
+        <div class="text-gold mb-4"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+        <p class="text-ink/70 text-sm leading-relaxed mb-6">"Nail art tasarımlarında gerçek bir sanatçı. Aklımdaki fikri anında hayata geçirdi. Karabağlar'ın en iyisi diyebilirim."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-full bg-powder flex items-center justify-center font-bold text-champagne">SD</div>
+          <div><div class="font-semibold text-sm">Selin D.</div><div class="text-xs text-ink/40">Google Yorumu</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER / ILETISIM ============ -->
+<section id="iletisim" class="bg-ink text-white pt-20 pb-32 lg:pb-16">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-12 items-start">
+      <div>
+        <div class="flex items-center gap-2 mb-6">
+          <span class="w-11 h-11 rounded-full ig-gradient flex items-center justify-center text-white"><i class="fa-solid fa-hand-sparkles"></i></span>
+          <span class="font-serif text-2xl font-bold">Nail Art <span class="text-gold-gradient">by Jeni</span></span>
+        </div>
+        <p class="text-white/60 max-w-md mb-8 leading-relaxed">İzmir Karabağlar'da butik tırnak stüdyosu. Kişiye özel nail art, steril bakım ve titiz işçilik.</p>
+
+        <div class="space-y-4 text-sm">
+          <div class="flex items-start gap-3">
+            <i class="fa-solid fa-location-dot text-champagne mt-1"></i>
+            <span class="text-white/80">Arap Hasan, 239. Sk. 35 A, 35150 Karabağlar / İzmir</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <i class="fa-brands fa-instagram text-champagne"></i>
+            <a href="https://www.instagram.com/nailart_by_jeni/" target="_blank" class="text-white/80 hover:text-white">@nailart_by_jeni</a>
+          </div>
+          <div class="flex items-center gap-3">
+            <i class="fa-brands fa-whatsapp text-champagne"></i>
+            <a href="https://wa.me/905000000000" target="_blank" class="text-white/80 hover:text-white">WhatsApp Randevu</a>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-3 mt-8">
+          <a href="https://wa.me/905000000000" target="_blank" class="inline-flex items-center gap-2 bg-[#25D366] px-5 py-3 rounded-full text-sm font-semibold hover:brightness-95 transition"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+          <a href="https://www.instagram.com/nailart_by_jeni/" target="_blank" class="inline-flex items-center gap-2 ig-gradient px-5 py-3 rounded-full text-sm font-semibold hover:brightness-95 transition"><i class="fa-brands fa-instagram"></i> Instagram</a>
+          <a href="https://www.google.com/maps/search/?api=1&query=Arap+Hasan+239.+Sk.+35A+35150+Karaba%C4%9Flar+%C4%B0zmir" target="_blank" class="inline-flex items-center gap-2 bg-white text-ink px-5 py-3 rounded-full text-sm font-semibold hover:bg-white/90 transition"><i class="fa-solid fa-location-dot text-champagne"></i> Haritada Aç</a>
+        </div>
+      </div>
+
+      <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white/10 h-[350px] lg:h-[400px]">
+        <iframe class="w-full h-full" style="border:0" loading="lazy" allowfullscreen
+          src="https://www.google.com/maps?q=Arap%20Hasan%20239.%20Sk.%2035A%2035150%20Karaba%C4%9Flar%20%C4%B0zmir&output=embed"></iframe>
+      </div>
+    </div>
+
+    <div class="border-t border-white/10 mt-14 pt-6 text-center text-white/40 text-xs">
+      © 2024 Nail Art by Jeni · Tüm hakları saklıdır. · Karabağlar / İzmir
+    </div>
+  </div>
+</section>
+
+<!-- ============ MOBILE FLOATING BAR ============ -->
+<div class="lg:hidden fixed bottom-0 inset-x-0 z-50 bg-white/95 backdrop-blur border-t border-nude/50 shadow-[0_-4px_20px_rgba(0,0,0,.08)] flex">
+  <a href="https://wa.me/905000000000?text=Merhaba,%20web%20sitenizden%20ula%C5%9F%C4%B1yorum.%20Nail%20art%20ve%20randevu%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum." target="_blank" class="flex-1 flex flex-col items-center py-3 text-[#25D366]">
+    <i class="fa-brands fa-whatsapp text-xl"></i><span class="text-[11px] font-semibold mt-1 text-ink">Randevu</span>
+  </a>
+  <a href="https://www.instagram.com/nailart_by_jeni/" target="_blank" class="flex-1 flex flex-col items-center py-3 border-x border-nude/40">
+    <i class="fa-brands fa-instagram text-xl bg-gradient-to-br from-[#f09433] via-[#dc2743] to-[#bc1888] bg-clip-text text-transparent"></i><span class="text-[11px] font-semibold mt-1 text-ink">Instagram</span>
+  </a>
+  <a href="https://www.google.com/maps/search/?api=1&query=Arap+Hasan+239.+Sk.+35A+35150+Karaba%C4%9Flar+%C4%B0zmir" target="_blank" class="flex-1 flex flex-col items-center py-3 text-champagne">
+    <i class="fa-solid fa-location-dot text-xl"></i><span class="text-[11px] font-semibold mt-1 text-ink">Haritada Aç</span>
+  </a>
+</div>
+
+<script>
+  // Mobile menu toggle
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    menuBtn.querySelector('i').classList.toggle('fa-bars');
+    menuBtn.querySelector('i').classList.toggle('fa-xmark');
+  });
+  document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => {
+    mobileMenu.classList.add('hidden');
+    menuBtn.querySelector('i').classList.add('fa-bars');
+    menuBtn.querySelector('i').classList.remove('fa-xmark');
+  }));
+
+  // Navbar shrink on scroll
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 30) {
+      nav.classList.add('shadow-lg');
+      nav.classList.remove('bg-cream/80');
+      nav.classList.add('bg-cream/95');
+    } else {
+      nav.classList.remove('shadow-lg');
+      nav.classList.add('bg-cream/80');
+      nav.classList.remove('bg-cream/95');
+    }
+  });
+
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); observer.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
